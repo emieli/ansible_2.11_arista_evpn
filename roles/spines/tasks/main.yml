@@ -1,0 +1,11 @@
+---
+
+- name: run show version on remote devices
+  arista.eos.eos_command:
+    commands: show version
+  register: output
+
+- name: changes performed
+  debug:
+    msg: "{{ output }}"
+  when: output is defined

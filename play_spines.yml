@@ -1,0 +1,8 @@
+---
+
+- name: SPINES
+  gather_facts: False
+  connection: httpapi
+  hosts: spines
+  roles:
+    - spines
